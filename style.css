@@ -1,0 +1,651 @@
+/* ===================================
+   BIRTHDAY WEBSITE V2
+   PART 1
+=================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#050816;
+
+color:#fff;
+
+overflow-x:hidden;
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#ff4d9d;
+
+border-radius:20px;
+
+}
+
+/* Loading Screen */
+
+#loading{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100vh;
+
+background:#050816;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+}
+
+.loader-heart{
+
+font-size:70px;
+
+color:#ff4d9d;
+
+animation:heartbeat 1s infinite;
+
+}
+
+#loading h1{
+
+margin-top:20px;
+
+font-size:24px;
+
+font-weight:500;
+
+}
+
+.loading-bar{
+
+margin-top:30px;
+
+width:260px;
+
+height:8px;
+
+background:#222;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+.progress{
+
+width:0;
+
+height:100%;
+
+background:linear-gradient(90deg,#ff4d9d,#FFD700);
+
+animation:loading 3s linear forwards;
+
+}
+
+/* Stars */
+
+#stars{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+z-index:-1;
+
+background-image:
+radial-gradient(white 1px,transparent 1px);
+
+background-size:40px 40px;
+
+opacity:.4;
+
+animation:starsMove 80s linear infinite;
+
+}
+
+/* Lock Screen */
+
+#lockScreen{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:20px;
+
+}
+
+.glass{
+
+width:360px;
+
+max-width:100%;
+
+padding:35px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,.15);
+
+text-align:center;
+
+box-shadow:0 0 40px rgba(255,77,157,.2);
+
+}
+
+.gift-icon{
+
+font-size:60px;
+
+color:#FFD700;
+
+margin-bottom:20px;
+
+}
+
+.glass h1{
+
+font-size:32px;
+
+margin-bottom:10px;
+
+}
+
+.glass p{
+
+opacity:.8;
+
+margin-bottom:20px;
+
+}
+
+input{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:15px;
+
+outline:none;
+
+font-size:18px;
+
+margin-bottom:20px;
+
+}
+
+button{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:30px;
+
+font-size:18px;
+
+cursor:pointer;
+
+background:linear-gradient(90deg,#ff4d9d,#ff80bf);
+
+color:white;
+
+transition:.4s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 25px #ff4d9d;
+
+}
+
+#error{
+
+margin-top:15px;
+
+color:#FFD700;
+
+}
+
+/* Animations */
+
+@keyframes heartbeat{
+
+0%{transform:scale(1);}
+
+50%{transform:scale(1.2);}
+
+100%{transform:scale(1);}
+
+}
+
+@keyframes loading{
+
+100%{
+
+width:100%;
+
+}
+
+}
+
+@keyframes starsMove{
+
+from{
+
+background-position:0 0;
+
+}
+
+to{
+
+background-position:0 1000px;
+
+}
+
+}
+
+/* Responsive */
+
+@media(max-width:600px){
+
+.glass{
+
+padding:25px;
+
+}
+
+.glass h1{
+
+font-size:28px;
+
+}
+
+.loader-heart{
+
+font-size:55px;
+
+}
+
+}
+
+/* ===================================
+   GIFT SCREEN
+=================================== */
+
+#giftScreen{
+display:none;
+height:100vh;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+}
+
+#giftScreen h1{
+font-size:38px;
+margin-bottom:40px;
+color:#FFD700;
+}
+
+#gift{
+position:relative;
+width:170px;
+height:170px;
+cursor:pointer;
+animation:giftFloat 2.5s ease-in-out infinite;
+}
+
+.box{
+position:absolute;
+bottom:0;
+width:170px;
+height:120px;
+background:linear-gradient(135deg,#ff4d9d,#ff80bf);
+border-radius:12px;
+box-shadow:0 0 35px rgba(255,77,157,.6);
+}
+
+.lid{
+position:absolute;
+top:20px;
+left:-5px;
+width:180px;
+height:35px;
+background:#ff99cc;
+border-radius:10px;
+}
+
+.ribbon-v{
+position:absolute;
+left:77px;
+width:16px;
+height:120px;
+background:#FFD700;
+bottom:0;
+}
+
+.ribbon-h{
+position:absolute;
+top:52px;
+width:170px;
+height:16px;
+background:#FFD700;
+}
+
+#giftScreen p{
+margin-top:30px;
+font-size:20px;
+opacity:.9;
+}
+
+/* ===================================
+ HERO SECTION
+=================================== */
+
+#website{
+display:none;
+}
+
+nav{
+width:100%;
+padding:20px;
+position:fixed;
+top:0;
+left:0;
+background:rgba(0,0,0,.25);
+backdrop-filter:blur(15px);
+z-index:1000;
+}
+
+nav h2{
+color:#FFD700;
+font-size:28px;
+}
+
+header{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+header h1{
+font-size:65px;
+color:#FFD700;
+text-shadow:0 0 20px gold;
+}
+
+header h2{
+font-size:40px;
+margin-top:20px;
+color:#ff80bf;
+}
+
+header p{
+margin-top:25px;
+max-width:700px;
+font-size:22px;
+line-height:1.8;
+opacity:.85;
+}
+
+/* ===================================
+ MOON
+=================================== */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:70px;
+
+right:60px;
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+background:#fff;
+
+box-shadow:
+0 0 40px white,
+0 0 80px white;
+
+opacity:.85;
+
+z-index:-2;
+
+}
+
+/* ===================================
+ FLOATING HEARTS
+=================================== */
+
+.heart{
+
+position:fixed;
+
+bottom:-40px;
+
+font-size:24px;
+
+animation:heartMove 8s linear infinite;
+
+pointer-events:none;
+
+opacity:.8;
+
+}
+
+/* ===================================
+ GALLERY
+=================================== */
+
+#gallery{
+
+padding:120px 20px;
+
+}
+
+#gallery h2{
+
+text-align:center;
+
+font-size:42px;
+
+margin-bottom:60px;
+
+color:#FFD700;
+
+}
+
+.photos{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+.photos img{
+
+width:100%;
+
+height:320px;
+
+object-fit:cover;
+
+border-radius:25px;
+
+transition:.5s;
+
+cursor:pointer;
+
+box-shadow:0 0 30px rgba(255,255,255,.1);
+
+}
+
+.photos img:hover{
+
+transform:translateY(-10px) scale(1.05);
+
+box-shadow:0 0 40px #ff4d9d;
+
+}
+
+/* ===================================
+ ANIMATIONS
+=================================== */
+
+@keyframes giftFloat{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-18px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+@keyframes heartMove{
+
+0%{
+
+transform:translateY(0);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120vh);
+
+opacity:0;
+
+}
+
+}
+
+@media(max-width:768px){
+
+header h1{
+
+font-size:46px;
+
+}
+
+header h2{
+
+font-size:30px;
+
+}
+
+header p{
+
+font-size:18px;
+
+}
+
+#gift{
+
+transform:scale(.85);
+
+}
+
+body::before{
+
+width:80px;
+
+height:80px;
+
+right:20px;
+
+}
+
+}
