@@ -115,24 +115,57 @@ heart.remove();
 // Romantic Letter
 // ==========================
 
-const letter = `Happy Birthday My Love ❤️
 
-ye chota sa gift tmhre liye 1 simple c wish bs hamesha khush rho 
-mere sth or aese hi khoon peti rho tng krti rho moti i love you so muchhh chnda
-meri mushkil m hr trh se sth rehna hamesha jese rehti ho or hamesha aesi bn ke rehnaa cuto c moti c 
-meri laadli c begum tmhe pta m itna zada piyar krta tmseee jiski koi hd ni hia 
-mtlb bhut zadaaa or hamesha krta rhongaa khair ye sb lfzo m tu bayan ni kr skte shi se lkn phr bhi 1 shair apke liye 
-" jo hia jitna hia tmse hia kafi
-ab ishq kaho ya pagl pan hum sub m raazi❤️
+const letter = `❤️ Happy Birthday Meri Chanda ❤️
 
-or isme 1 1 chez 11 line mane khud likhi hia hr chez mane khud likhi hia
-i love you hamesha khush rho❤️lrti jhgrti jesi bhi rho maasi love you so much❤️wish you very very happy birthday❤️
+Ye chota sa gift tmhre liye ❤️
 
-I promise to love you,
-respect you,
-and stand beside you forever.
+1 simple c wish...
+Bs hamesha khush rho,
+mere sth rho,
+or aese hi khoon peti rho,
+tng krti rho meri moti. ❤️
 
-Happy Birthday My Queen ❤️`;
+I Love You So Muchhh Chanda. ❤️
+
+Meri mushkil m hr trh se sth rehna hamesha,
+jese rehti ho.
+Or hamesha aesi hi bn ke rehnaa,
+meri cuto c moti c,
+meri laadli c begum. ❤️
+
+Tmhe pta hia m tmse itna zada piyar krta hnn,
+jis ki koi had hi nhi hia.
+Mtlb bhut zadaaa...
+Or hamesha krta rhongaa. ❤️
+
+Khair...
+Ye sb lfzon m tu bayan nhi ho skta,
+lkn phr bhi 1 shair sirf apke liye. ❤️
+
+"Jo hia jitna hia tmse hia kafi,
+Ab ishq kaho ya paglpan,
+Hum sub m raazi. ❤️"
+
+Or isme jo bhi 1-1 chez likhi hia,
+wo sb mane khud likhi hia.
+Hr line,
+hr lafz,
+hr ehsaas,
+sirf apke liye. ❤️
+
+I Love You. ❤️
+
+Hamesha khush rho,
+lrti jhgrti,
+jesi bhi rho,
+meri maasi. ❤️😂
+
+Love You So Muchhh. ❤️
+
+Wish You A Very Very Happy Birthday, Meri Jaan! 🎂🎉❤️`;
+
+
 
 const typing = document.getElementById("typing");
 
