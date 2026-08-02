@@ -425,3 +425,32 @@ setTimeout(()=>{
 console.log("❤️ Birthday Website V2 Loaded");
 
 },5000);
+const music=document.getElementById("bgMusic");
+
+const musicBtn=document.getElementById("musicBtn");
+
+const musicText=document.getElementById("musicText");
+
+const musicIcon=document.getElementById("musicIcon");
+
+function toggleMusic(){
+
+if(music.paused){
+
+music.play();
+
+musicText.innerHTML="Playing";
+
+musicIcon.innerHTML="🎶";
+
+}else{
+
+music.pause();
+
+musicText.innerHTML="Play Music";
+
+musicIcon.innerHTML="🎵";
+
+}
+
+}
