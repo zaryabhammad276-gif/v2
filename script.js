@@ -69,8 +69,6 @@ giftScreen.style.display="none";
 
 website.style.display="block";
 
-music.play();
-
 startHearts();
 
 },500);
