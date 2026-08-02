@@ -235,15 +235,7 @@ blowBtn.disabled=true;
 // Music Control
 // ==========================
 
-document.addEventListener("click",()=>{
 
-if(music.paused){
-
-music.play().catch(()=>{});
-
-}
-
-},{once:true});
 
 // ==========================
 // Image Animation
