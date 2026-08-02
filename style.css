@@ -649,3 +649,69 @@ right:20px;
 }
 
 }
+#musicBtn{
+    position:fixed;
+    right:20px;
+    bottom:25px;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:14px 22px;
+
+    border:none;
+    border-radius:50px;
+
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    z-index:99999;
+
+    box-shadow:
+    0 0 20px rgba(255,105,180,.35),
+    inset 0 0 10px rgba(255,255,255,.15);
+
+    transition:.35s;
+}
+
+#musicBtn:hover{
+
+transform:translateY(-4px) scale(1.05);
+
+background:rgba(255,105,180,.25);
+
+box-shadow:
+0 0 35px hotpink;
+
+}
+
+#musicIcon{
+
+font-size:22px;
+
+animation:spin 5s linear infinite;
+
+}
+
+@keyframes spin{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
