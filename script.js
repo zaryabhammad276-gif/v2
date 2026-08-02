@@ -117,11 +117,16 @@ heart.remove();
 
 const letter = `Happy Birthday My Love ❤️
 
-You are the most beautiful blessing of my life.
+ye chota sa gift tmhre liye 1 simple c wish bs hamesha khush rho 
+mere sth or aese hi khoon peti rho tng krti rho moti i love you so muchhh chnda
+meri mushkil m hr trh se sth rehna hamesha jese rehti ho or hamesha aesi bn ke rehnaa cuto c moti c 
+meri laadli c begum tmhe pta m itna zada piyar krta tmseee jiski koi hd ni hia 
+mtlb bhut zadaaa or hamesha krta rhongaa khair ye sb lfzo m tu bayan ni kr skte shi se lkn phr bhi 1 shair apke liye 
+" jo hia jitna hia tmse hia kafi
+ab ishq kaho ya pagl pan hum sub m raazi❤️
 
-Every smile of yours makes my world brighter.
-
-Thank you for always being with me.
+or isme 1 1 chez 11 line mane khud likhi hia hr chez mane khud likhi hia
+i love you hamesha khush rho❤️lrti jhgrti jesi bhi rho maasi love you so much❤️wish you very very happy birthday❤️
 
 I promise to love you,
 respect you,
