@@ -69,6 +69,8 @@ giftScreen.style.display="none";
 
 website.style.display="block";
 
+music.play();
+
 startHearts();
 
 },500);
@@ -113,8 +115,7 @@ heart.remove();
 // Romantic Letter
 // ==========================
 
-
-const letter = `❤️ Happy Birthday Meri Chanda ❤️
+const letter = const letter = `❤️ Happy Birthday Meri Chanda ❤️
 
 Ye chota sa gift tmhre liye ❤️
 
@@ -162,8 +163,6 @@ meri maasi. ❤️😂
 Love You So Muchhh. ❤️
 
 Wish You A Very Very Happy Birthday, Meri Jaan! 🎂🎉❤️`;
-
-
 
 const typing = document.getElementById("typing");
 
@@ -233,7 +232,15 @@ blowBtn.disabled=true;
 // Music Control
 // ==========================
 
+document.addEventListener("click",()=>{
 
+if(music.paused){
+
+music.play().catch(()=>{});
+
+}
+
+},{once:true});
 
 // ==========================
 // Image Animation
@@ -415,32 +422,3 @@ setTimeout(()=>{
 console.log("❤️ Birthday Website V2 Loaded");
 
 },5000);
-const music=document.getElementById("bgMusic");
-
-const musicBtn=document.getElementById("musicBtn");
-
-const musicText=document.getElementById("musicText");
-
-const musicIcon=document.getElementById("musicIcon");
-
-function toggleMusic(){
-
-if(music.paused){
-
-music.play();
-
-musicText.innerHTML="Playing";
-
-musicIcon.innerHTML="🎶";
-
-}else{
-
-music.pause();
-
-musicText.innerHTML="Play Music";
-
-musicIcon.innerHTML="🎵";
-
-}
-
-}
