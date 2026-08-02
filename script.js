@@ -115,7 +115,7 @@ heart.remove();
 // Romantic Letter
 // ==========================
 
-const letter = const letter = `❤️ Happy Birthday Meri Chanda ❤️
+const letter = `❤️ Happy Birthday Meri Chanda ❤️
 
 Ye chota sa gift tmhre liye ❤️
 
